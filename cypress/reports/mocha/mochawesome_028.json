@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-19T18:39:11.372Z",
+    "end": "2020-10-19T18:39:33.343Z",
+    "duration": 21971,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "778ea763-ce9d-4e49-a7c1-71dfb36ef149",
+      "title": "",
+      "fullFile": "cypress\\integration\\Tests\\TiposDeLogin.spec.js",
+      "file": "cypress\\integration\\Tests\\TiposDeLogin.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c7f66574-aa55-4c5e-ab09-83bf8c3fa7a0",
+          "title": "Fazer Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login usando dados na Fixture",
+              "fullTitle": "Fazer Login Login usando dados na Fixture",
+              "timedOut": null,
+              "duration": 5992,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(this.data.url);\ncy.get('#email').type(this.data.email);\ncy.get('#senha').type(this.data.senha);\ncy.get('.btn').contains('Entrar').click();",
+              "err": {},
+              "uuid": "c5d91c38-527a-48db-9776-778eb21a16b7",
+              "parentUUID": "c7f66574-aa55-4c5e-ab09-83bf8c3fa7a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Usando Page Objects",
+              "fullTitle": "Fazer Login Usando Page Objects",
+              "timedOut": null,
+              "duration": 5371,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Login[\"default\"].abrirUrl();\n_Login[\"default\"].preencherDadosLogin();\n_Perfil[\"default\"].preencherDados();",
+              "err": {},
+              "uuid": "eec27f24-5d71-4eea-a188-986c47ce3bb6",
+              "parentUUID": "c7f66574-aa55-4c5e-ab09-83bf8c3fa7a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login usando dados na ENV",
+              "fullTitle": "Fazer Login Login usando dados na ENV",
+              "timedOut": null,
+              "duration": 3242,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Login[\"default\"].abrirUrl();\ncy.get('#email').type(Cypress.env('email'));\ncy.get('#senha').type(Cypress.env('senha'));\ncy.get('.btn').contains('Entrar').click();",
+              "err": {},
+              "uuid": "b9a60b37-f0e0-487e-8d1b-1ca64616c3b7",
+              "parentUUID": "c7f66574-aa55-4c5e-ab09-83bf8c3fa7a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Custom comands",
+              "fullTitle": "Fazer Login Custom comands",
+              "timedOut": null,
+              "duration": 3380,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();",
+              "err": {},
+              "uuid": "175e062c-1917-4ca4-95f1-4b5795d2e9e2",
+              "parentUUID": "c7f66574-aa55-4c5e-ab09-83bf8c3fa7a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c5d91c38-527a-48db-9776-778eb21a16b7",
+            "eec27f24-5d71-4eea-a188-986c47ce3bb6",
+            "b9a60b37-f0e0-487e-8d1b-1ca64616c3b7",
+            "175e062c-1917-4ca4-95f1-4b5795d2e9e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17985,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

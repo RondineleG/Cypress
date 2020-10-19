@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-10-19T18:37:59.242Z",
+    "end": "2020-10-19T18:38:10.388Z",
+    "duration": 11146,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79d2704a-5901-4e01-a9e5-8970f7a62319",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\TC05_thenCommand.spec.js",
+      "file": "cypress\\integration\\QAM\\TC05_thenCommand.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c2cdc14-226a-4e3e-b41e-792eb80283d3",
+          "title": "Create and mark-unmark as favorite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a post",
+              "fullTitle": "Create and mark-unmark as favorite Create a post",
+              "timedOut": null,
+              "duration": 2617,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ul.navbar-nav').children().contains('New Post').click();\ncy.hash().should('include', '#/editor');\ncy.get('form').within(function ($form) {\n  cy.get('input').first().type('Test');\n  cy.get('input').eq(1).type('Test 1');\n  cy.get('textarea').last().type('Test 2');\n  cy.contains('Publish Article').click();\n});\ncy.url().should('include', 'article');",
+              "err": {},
+              "uuid": "8de42172-b40e-486e-a149-153bacc18668",
+              "parentUUID": "7c2cdc14-226a-4e3e-b41e-792eb80283d3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mark-unmark as favorite",
+              "fullTitle": "Create and mark-unmark as favorite Mark-unmark as favorite",
+              "timedOut": null,
+              "duration": 8388,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ul.navbar-nav').children().contains('QAMs').click();\ncy.contains('My Articles').should('be.visible');\ncy.get('.ion-heart').first().click();\ncy.contains('Favorited Articles').click();\ncy.url().should('include', 'favorites');\ncy.get('.btn-primary').first().then(function ($fav) {\n  var favCount = $fav.text();\n  expect(parseInt(favCount)).to.eq(1);\n}).click();\ncy.reload();\ncy.contains('No articles are here... yet.').should('be.visible');\ncy.go('back');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'QAMs' within the element: [ <li.nav-item>, 3 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'QAMs' within the element: [ <li.nav-item>, 3 more... ] but never did.\n    at Context.eval (https://react-redux.realworld.io/__cypress/tests?p=cypress\\integration\\QAM\\TC05_thenCommand.spec.js:116:40)",
+                "diff": null
+              },
+              "uuid": "78fed7dc-b9d8-44ee-9bba-e19ebe3d539d",
+              "parentUUID": "7c2cdc14-226a-4e3e-b41e-792eb80283d3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8de42172-b40e-486e-a149-153bacc18668"
+          ],
+          "failures": [
+            "78fed7dc-b9d8-44ee-9bba-e19ebe3d539d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11005,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
