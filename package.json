@@ -15,7 +15,8 @@
     "allure:report": "allure generate allure-results",
     "allure:clear": "rm -r allure-results/ allure-report || true",
     "allure:open": "allure open allure-report",
-    "testAllure": "npx npm-run-all allure:clear cy:run allure:report"
+    "testAllure": "npx npm-run-all allure:clear cy:run allure:report",
+    "test": "cypress run"
   },
   "author": "",
   "license": "ISC",
