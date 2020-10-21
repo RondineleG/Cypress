@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-10-19T01:58:22.159Z",
-    "end": "2020-10-19T01:58:26.566Z",
-    "duration": 4407,
+    "failures": 1,
+    "start": "2020-10-21T21:11:49.024Z",
+    "end": "2020-10-21T21:12:12.942Z",
+    "duration": 23918,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,49 +18,53 @@
   },
   "results": [
     {
-      "uuid": "e61058e2-a5ee-450c-8133-aec4f5f3d90f",
+      "uuid": "2273a676-3eea-4638-9be5-87d49f947bd1",
       "title": "",
-      "fullFile": "cypress\\integration\\Login.feature",
-      "file": "cypress\\integration\\Login.feature",
+      "fullFile": "cypress\\integration\\Projeto.spec.js",
+      "file": "cypress\\integration\\Projeto.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "84a72dba-bf52-4f2f-a503-4defa39053e6",
-          "title": "Login",
+          "uuid": "998abfa5-857f-411d-b733-9ddc31e5d940",
+          "title": "Cadasrar",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Conduit Login",
-              "fullTitle": "Login Conduit Login",
+              "title": "Cadastrar Dados básicos",
+              "fullTitle": "Cadasrar Cadastrar Dados básicos",
               "timedOut": null,
-              "duration": 4272,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 20098,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {},
-              "uuid": "eed76f15-adae-41a2-9542-661923c011ba",
-              "parentUUID": "84a72dba-bf52-4f2f-a503-4defa39053e6",
+              "code": "cy.get('nav > .nav > li:nth-child(2) > .menu-link').click();\ncy.get('.dropdown-menu-caixa-submenu-2 > .informacoes-wrapper:nth-child(2) .btn').click();\ncy.url().should('contains', 'https://app.bussolasocial.com.br/projeto-novo/cadastro');\ncy.get('#nome').click();\ncy.get('#nome').type('Benedito e Tatiane Assessoria Jurídica ME');\ncy.get('#data_inicial').click();\ncy.get('#data_inicial').type('01/01/2020');\ncy.get('#data_final').type('31/10/2020');\ncy.get('.active:nth-child(7)').click();\ncy.get('.col-md-7 > .form-group > * > .btn-group > .btn > .bs-caret > .bs-caret-container > .fa').click();\ncy.get('.col-md-7 > .form-group > * > .btn-group > .open > .dropdown-menu > .selected > * > .text').click();\ncy.get('.programa .filter-option').click();\ncy.get('.col-xs-12 > .form-group li:nth-child(2) .text').click();\ncy.get('.count-element > .form-control').click();\ncy.get('.count-element > .form-control').type('Benedito e Tatiane Assessoria Jurídica ME');\ncy.get('.hover > .iCheck-helper').click();\ncy.get('.hover > .iCheck-helper').click();\ncy.get('#responsavel\\[nome\\]').click();\ncy.get('#responsavel\\[nome\\]').type('Benedito e Tatiane Assessoria Jurídica ME');\ncy.get('#responsavel\\[email\\]').type('atendimento@beneditoetatianeassessoriajuridicame.com.br');\ncy.get('#responsavel\\[email\\]').click();\ncy.get('.telefone').click();\ncy.get('.telefone').type('(33) 3333-3335');\ncy.get('.bs-placeholder > .filter-option').click();\ncy.get('.m-b-n-xs li:nth-child(2) .text').click();\ncy.get('.btn-lg').click();\ncy.get('#form-projeto-cadastra').submit();\ncy.url().should('contains', 'https://app.bussolasocial.com.br/projeto-novo/6537/cadastro/resumo');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.hover > .iCheck-helper`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.hover > .iCheck-helper`, but never found it.\n    at Context.eval (https://app.bussolasocial.com.br/__cypress/tests?p=cypress\\integration\\Projeto.spec.js:184:8)",
+                "diff": null
+              },
+              "uuid": "630a4045-d77b-40e7-ba98-1a2e39342571",
+              "parentUUID": "998abfa5-857f-411d-b733-9ddc31e5d940",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "eed76f15-adae-41a2-9542-661923c011ba"
+          "passes": [],
+          "failures": [
+            "630a4045-d77b-40e7-ba98-1a2e39342571"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4272,
+          "duration": 20098,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -78,7 +82,7 @@
   ],
   "meta": {
     "mocha": {
-      "version": "7.2.0"
+      "version": "7.0.1"
     },
     "mochawesome": {
       "options": {

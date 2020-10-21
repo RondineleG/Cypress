@@ -1,7 +1,5 @@
-export let elements = 
+export let dadosBasicos = 
 {
-    // Dados básicos
-   
     menuProjeto: 'nav > .nav > :nth-child(2) > .menu-link',
 
     cadastrarProjeto: '.open > .dropdown-menu > .dropdown-menu-caixa-submenu > .informacoes-wrapper > :nth-child(1) > .btn',
@@ -33,30 +31,5 @@ export let elements =
     operadoraTelefone: '.m-b-n-xs > .form-group > div > .btn-group > .btn > .filter-option',
     
     selecionarOperadora:'.m-b-n-xs > .form-group > div > .btn-group > .dropdown-menu > .dropdown-menu > li:nth-child(4) > a > .text',
- 
-    salvarDados:'.col-xs-12 > .btn',
-
-    cadastrarResumo:'.li-navegacao-lateral:nth-child(2) > a',
-  
-    
-
-    // Resumo do projeto
-
-    urlProjeto: 'https://app.bussolasocial.com.br/projeto-novo/6081/cadastro/resumo',
-    resumoProjeto: '.form-control:nth-child(1)',
-    salvarResumo: '.col-xs-12 > .btn',
-    modaVisivel: '.toast',
-    modalMensagen: '.toast-message',
-    modalTitulo: '.toast-title',
-    cadastrarObjetivo : '.li-navegacao-lateral:nth-child(3) > a',
-
-    //Cadastrar obejetivos
-    objetivoGeral: '#objetivo_geral',
-    primeiroObjetivo:"(//textarea[@name='objetivo[descricao][]'])[2]",
-    maisObejetivo: '.sortable-grupo-lista-item .btn:nth-child(1) > .fas',
-    segundoObejetivo: '.count-element > .count-element > .count-element > .width-100',
-    objetivoVazio:'.sortable-grupo-lista-item:nth-child(4) .width-100',
-    salvarObjetivo: "//button[@type='submit']",
-    cadastrarPlano: '.li-navegacao-lateral:nth-child(4) > a',
-
+        
 }

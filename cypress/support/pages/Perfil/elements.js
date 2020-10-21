@@ -1,4 +1,4 @@
-export const ELEMENTS = {
+export let ELEMENTS = {
 
     menu: '.dropdown-user-icon',
     openMenu: '.open > .dropdown-menu > :nth-child(1) > a',

@@ -1,4 +1,4 @@
-const el = require('./elements').ELEMENTS;
+let el = require('./elements').ELEMENTS;
 
 class Login {
     abrirUrl() {
@@ -9,6 +9,7 @@ class Login {
         cy.get(el.email).type(Cypress.env('email'));
         cy.get(el.senha).type(Cypress.env('senha'));
         cy.get(el.submit).click();
+        cy.submit();
     }
 
 }

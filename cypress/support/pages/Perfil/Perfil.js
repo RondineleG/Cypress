@@ -1,4 +1,4 @@
-const el = require('./elements').ELEMENTS;
+let el = require('./elements').ELEMENTS;
 
 class Perfil {
 

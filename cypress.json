@@ -1,6 +1,4 @@
 {
-    "viewportWidth": 1024,
-    "viewportHeight": 768,
     "projectId": "isj69v",
     "requestTimeout": 10000,
     "defaultCommandTimeout": 8000,
@@ -11,7 +9,6 @@
         "dev": "http://app.bussola.test/",
         "prod": "https://app.bussolasocial.com.br/"
     },
-    "baseUrl" : "https://react-redux.realworld.io",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
@@ -19,7 +16,7 @@
             "reportDir": "cypress/reports/mocha",
             "quite": true,
             "overwrite": false,
-            "html": true,
+            "html": false,
             "json": true
         }
     }

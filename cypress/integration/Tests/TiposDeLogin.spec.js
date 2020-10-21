@@ -3,11 +3,30 @@ import Perfil from '../../support/pages/Perfil/Perfil'
 
 describe('Fazer Login', () => {
 
-    before(function() {
-        cy.fixture('Login').then(function(data) {
+    before(function()
+     {
+        cy.fixture('Login').then(function(data)
+         {
             this.data = data
         });
 
+    })
+
+    beforeEach(function()
+    {
+        cy.login();
+    })
+
+    it('Teste', function() {
+
+        cy.viewport(1366, 625)
+     
+        cy.visit('https://app.bussolasocial.com.br/projeto-novo/cadastro')
+     
+          cy.xpath('//*[@id="responsavel[nome]"]').click();
+          cy.xpath('//*[@id="responsavel[nome]"]').type('Ola');
+        
+     
     })
 
     it('Login usando dados na Fixture', function() {
